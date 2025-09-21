@@ -39,11 +39,11 @@ datos <- read.table(textConnection(input), header = TRUE)
 datos$especie <- as.factor(datos$especie)
 
 #  # Paso 2. Histograma de datos por clase
-p1 <- ggplot(data = datos, aes(x = pata, fill = especie)) + geom_histogram(position = "identity", 
+p1 <- ggplot(data = datos, aes(x = pata, fill = especie)) + geom_histogram(position = "identity",
 alpha = 0.5,bins=30)
-p2 <- ggplot(data = datos, aes(x = abdomen, fill = especie)) + geom_histogram(position = 
+p2 <- ggplot(data = datos, aes(x = abdomen, fill = especie)) + geom_histogram(position =
 "identity", alpha = 0.5,bins=30)
-p3 <- ggplot(data = datos, aes(x = organo_sexual, fill = especie)) + geom_histogram(position = 
+p3 <- ggplot(data = datos, aes(x = organo_sexual, fill = especie)) + geom_histogram(position =
 "identity", alpha = 0.5,bins=30)
 ggarrange(p1, p2, p3, nrow = 3, common.legend = TRUE)
 #d<-as.numeric(datos)
